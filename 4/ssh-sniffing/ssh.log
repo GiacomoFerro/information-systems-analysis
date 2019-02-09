@@ -1,0 +1,588 @@
+restart_syscall(<... resuming interrupted poll ...>) = 1
+read(6, "\0\0\0\r", 4)                  = 4
+read(6, "\f\0\0\0\10password", 13)      = 13
+getuid32()                              = 0
+open("/etc/login.defs", O_RDONLY|O_LARGEFILE) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=10551, ...}) = 0
+read(4, "#\n# /etc/login.defs - Configurat"..., 4096) = 4096
+read(4, " issuing \n# the \"mesg y\" command"..., 4096) = 4096
+read(4, " algorithm compatible with the o"..., 4096) = 2359
+close(4)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(4)                                = 0
+open("/etc/shadow", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0640, st_size=1296, ...}) = 0
+mmap2(NULL, 1296, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 1296, [1296], SEEK_SET)      = 0
+munmap(0xb76d6000, 1296)                = 0
+close(4)                                = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_AUDIT) = 4
+fcntl64(4, F_SETFD, FD_CLOEXEC)         = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_ROUTE) = 8
+bind(8, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(8, {sa_family=AF_NETLINK, pid=3944, groups=00000000}, [12]) = 0
+time(NULL)                              = 1545573269
+sendto(8, "\24\0\0\0\26\0\1\3\225\223\37\\\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"L\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"H\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\225\223\37\\h\17\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(8)                                = 0
+readlink("/proc/self/exe", "/usr/sbin/sshd", 4096) = 14
+sendto(4, "\210\0\0\0L\4\5\0\1\0\0\0\0\0\0\0op=PAM:authentic"..., 136, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 136
+poll([{fd=4, events=POLLIN}], 1, 500)   = 1 ([{fd=4, revents=POLLIN}])
+recvfrom(4, "$\0\0\0\2\0\0\1\1\0\0\0h\17\0\0\0\0\0\0\210\0\0\0L\4\5\0\1\0\0\0"..., 8988, MSG_PEEK|MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+recvfrom(4, "$\0\0\0\2\0\0\1\1\0\0\0h\17\0\0\0\0\0\0\210\0\0\0L\4\5\0\1\0\0\0"..., 8988, MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+close(4)                                = 0
+write(6, "\0\0\0\5\r", 5)               = 5
+write(6, "\0\0\0\1", 4)                 = 4
+read(6, "\0\0\0\1", 4)                  = 4
+read(6, "f", 1)                         = 1
+open("/var/run/nologin", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+open("/etc/nologin", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+getuid32()                              = 0
+open("/etc/login.defs", O_RDONLY|O_LARGEFILE) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=10551, ...}) = 0
+read(4, "#\n# /etc/login.defs - Configurat"..., 4096) = 4096
+read(4, " issuing \n# the \"mesg y\" command"..., 4096) = 4096
+read(4, " algorithm compatible with the o"..., 4096) = 2359
+close(4)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(4)                                = 0
+open("/etc/shadow", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0640, st_size=1296, ...}) = 0
+mmap2(NULL, 1296, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 1296, [1296], SEEK_SET)      = 0
+munmap(0xb76d6000, 1296)                = 0
+close(4)                                = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_AUDIT) = 4
+fcntl64(4, F_SETFD, FD_CLOEXEC)         = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_ROUTE) = 8
+bind(8, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(8, {sa_family=AF_NETLINK, pid=3944, groups=00000000}, [12]) = 0
+time(NULL)                              = 1545573269
+sendto(8, "\24\0\0\0\26\0\1\3\225\223\37\\\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"L\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"H\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\225\223\37\\h\17\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(8)                                = 0
+sendto(4, "\204\0\0\0M\4\5\0\2\0\0\0\0\0\0\0op=PAM:accountin"..., 132, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 132
+poll([{fd=4, events=POLLIN}], 1, 500)   = 1 ([{fd=4, revents=POLLIN}])
+recvfrom(4, "$\0\0\0\2\0\0\1\2\0\0\0h\17\0\0\0\0\0\0\204\0\0\0M\4\5\0\2\0\0\0"..., 8988, MSG_PEEK|MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+recvfrom(4, "$\0\0\0\2\0\0\1\2\0\0\0h\17\0\0\0\0\0\0\204\0\0\0M\4\5\0\2\0\0\0"..., 8988, MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+close(4)                                = 0
+write(6, "\0\0\0\tg", 5)                = 5
+write(6, "\0\0\0\1\0\0\0\0", 8)         = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3945, si_uid=123, si_status=0, si_utime=0, si_stime=0} ---
+time([1545573269])                      = 1545573269
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2692, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2692, ...}) = 0
+read(4, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\7\0\0\0\7\0\0\0\0"..., 4096) = 2692
+_llseek(4, -28, [2664], SEEK_CUR)       = 0
+read(4, "\nCET-1CEST,M3.5.0,M10.5.0/3\n", 4096) = 28
+close(4)                                = 0
+socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 4
+connect(4, {sa_family=AF_LOCAL, sun_path="/dev/log"}, 110) = 0
+send(4, "<38>Dec 23 14:54:29 sshd[3944]: "..., 92, MSG_NOSIGNAL) = 92
+close(4)                                = 0
+read(6, "\0\0\5\251", 4)                = 4
+read(6, "\32\0\0\0 %\227\1\243\4\24\371\\71|7:\27\272\20\324\nL\364\376c\36ha\342U"..., 1449) = 1449
+read(7, "", 4)                          = 0
+close(7)                                = 0
+close(6)                                = 0
+close(-1)                               = -1 EBADF (Bad file descriptor)
+waitpid(3945, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0) = 3945
+alarm(0)                                = 107
+rt_sigaction(SIGALRM, NULL, {0x4628e0, [], SA_INTERRUPT}, 8) = 0
+rt_sigaction(SIGALRM, {SIG_DFL, [], SA_INTERRUPT}, NULL, 8) = 0
+close(5)                                = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_AUDIT) = 4
+fcntl64(4, F_SETFD, FD_CLOEXEC)         = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_ROUTE) = 5
+bind(5, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(5, {sa_family=AF_NETLINK, pid=3944, groups=00000000}, [12]) = 0
+time(NULL)                              = 1545573269
+sendto(5, "\24\0\0\0\26\0\1\3\225\223\37\\\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(5, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"L\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(5, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"H\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(5, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\225\223\37\\h\17\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(5)                                = 0
+sendto(4, "\200\0\0\0O\4\5\0\3\0\0\0\0\0\0\0op=PAM:setcred a"..., 128, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 128
+poll([{fd=4, events=POLLIN}], 1, 500)   = 1 ([{fd=4, revents=POLLIN}])
+recvfrom(4, "$\0\0\0\2\0\0\1\3\0\0\0h\17\0\0\0\0\0\0\200\0\0\0O\4\5\0\3\0\0\0"..., 8988, MSG_PEEK|MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+recvfrom(4, "$\0\0\0\2\0\0\1\3\0\0\0h\17\0\0\0\0\0\0\200\0\0\0O\4\5\0\3\0\0\0"..., 8988, MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+close(4)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(4)                                = 0
+open("/proc/self/uid_map", O_RDONLY|O_LARGEFILE) = 4
+read(4, "         0          0 4294967295"..., 34) = 33
+read(4, "", 1)                          = 0
+close(4)                                = 0
+open("/proc/self/loginuid", O_RDWR|O_LARGEFILE|O_NOFOLLOW) = 4
+read(4, "4294967295", 24)               = 10
+read(4, "", 14)                         = 0
+_llseek(4, 0, [0], SEEK_SET)            = 0
+ftruncate64(4, 0)                       = 0
+write(4, "1000", 4)                     = 4
+close(4)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(4)                                = 0
+getuid32()                              = 0
+getgid32()                              = 0
+setregid32(1000, -1)                    = 0
+setreuid32(1000, -1)                    = 0
+keyctl(KEYCTL_JOIN_SESSION_KEYRING, NULL) = 523492500
+keyctl(KEYCTL_LINK, KEY_SPEC_USER_KEYRING, KEY_SPEC_SESSION_KEYRING) = 0
+setreuid32(0, -1)                       = 0
+setregid32(0, -1)                       = 0
+open("/etc/login.defs", O_RDONLY|O_LARGEFILE) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=10551, ...}) = 0
+read(4, "#\n# /etc/login.defs - Configurat"..., 4096) = 4096
+read(4, " issuing \n# the \"mesg y\" command"..., 4096) = 4096
+close(4)                                = 0
+open("/etc/login.defs", O_RDONLY|O_LARGEFILE) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=10551, ...}) = 0
+read(4, "#\n# /etc/login.defs - Configurat"..., 4096) = 4096
+read(4, " issuing \n# the \"mesg y\" command"..., 4096) = 4096
+close(4)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(4)                                = 0
+umask(022)                              = 022
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/etc/group", O_RDONLY|O_CLOEXEC)  = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=1036, ...}) = 0
+mmap2(NULL, 1036, PROT_READ, MAP_SHARED, 4, 0) = 0xb76d6000
+_llseek(4, 1036, [1036], SEEK_SET)      = 0
+munmap(0xb76d6000, 1036)                = 0
+close(4)                                = 0
+umask(0777)                             = 022
+umask(02)                               = 0777
+getuid32()                              = 0
+open("/etc/login.defs", O_RDONLY|O_LARGEFILE) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=10551, ...}) = 0
+read(4, "#\n# /etc/login.defs - Configurat"..., 4096) = 4096
+read(4, " issuing \n# the \"mesg y\" command"..., 4096) = 4096
+read(4, " algorithm compatible with the o"..., 4096) = 2359
+close(4)                                = 0
+access("/var/run/utmpx", F_OK)          = -1 ENOENT (No such file or directory)
+open("/var/run/utmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_SET)            = 0
+alarm(0)                                = 0
+rt_sigaction(SIGALRM, {0xb7ab69f0, [], 0}, {SIG_DFL, [], SA_INTERRUPT}, 8) = 0
+alarm(10)                               = 0
+fcntl64(4, F_SETLKW, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+read(4, "\2\0\0\0\0\0\0\0~\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 384) = 384
+read(4, "\6\0\0\0L\3\0\0tty1\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 384) = 384
+read(4, "\7\0\0\0\303\3\0\0tty7\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 384) = 384
+read(4, "\1\0\0\0005\0\0\0~\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 384) = 384
+read(4, "", 384)                        = 0
+fcntl64(4, F_SETLKW, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+alarm(0)                                = 10
+rt_sigaction(SIGALRM, {SIG_DFL, [], SA_INTERRUPT}, NULL, 8) = 0
+close(4)                                = 0
+getuid32()                              = 0
+time([1545573269])                      = 1545573269
+socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 4
+connect(4, {sa_family=AF_LOCAL, sun_path="/dev/log"}, 110) = 0
+send(4, "<86>Dec 23 14:54:29 sshd[3944]: "..., 98, MSG_NOSIGNAL) = 98
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+_llseek(5, 0, [0], SEEK_CUR)            = 0
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 5, 0) = 0xb76d6000
+_llseek(5, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(5)                                = 0
+open("/sys/fs/kdbus/0-system/bus", O_RDWR|O_NOCTTY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+getsockopt(5, SOL_SOCKET, SO_RCVBUF, [163840], [4]) = 0
+setsockopt(5, SOL_SOCKET, SO_RCVBUFFORCE, [8388608], 4) = 0
+getsockopt(5, SOL_SOCKET, SO_SNDBUF, [163840], [4]) = 0
+setsockopt(5, SOL_SOCKET, SO_SNDBUFFORCE, [8388608], 4) = 0
+connect(5, {sa_family=AF_LOCAL, sun_path="/var/run/dbus/system_bus_socket"}, 33) = 0
+getsockopt(5, SOL_SOCKET, SO_PEERCRED, {pid=1, uid=0, gid=0}, [12]) = 0
+fstat64(5, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+getsockopt(5, SOL_SOCKET, SO_ACCEPTCONN, [0], [4]) = 0
+getsockname(5, {sa_family=AF_LOCAL, NULL}, [2]) = 0
+geteuid32()                             = 0
+sendmsg(5, {msg_name(0)=NULL, msg_iov(3)=[{"\0AUTH EXTERNAL ", 15}, {"30", 2}, {"\r\nNEGOTIATE_UNIX_FD\r\nBEGIN\r\n", 28}], msg_controllen=0, msg_flags=0}, MSG_DONTWAIT|MSG_NOSIGNAL) = 45
+gettid()                                = 3944
+getrandom("\201\302\200\246A^\363\2231\376>\273\0fkO", 16, GRND_NONBLOCK) = 16
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"OK bb858cbc17494ecc8ac897d85c1f8"..., 256}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 52
+sendmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\1\0\1\0\0\0\0\1\0\0\0m\0\0\0\1\1o\0\25\0\0\0/org/fre"..., 128}], msg_controllen=0, msg_flags=0}, MSG_DONTWAIT|MSG_NOSIGNAL) = 128
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\2\1\1\n\0\0\0\1\0\0\0=\0\0\0\6\1s\0\5\0\0\0", 24}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 24
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{":1.94\0\0\0\5\1u\0\1\0\0\0\10\1g\0\1s\0\0\7\1s\0\24\0\0\0"..., 66}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 66
+sendmsg(5, {msg_name(0)=NULL, msg_iov(2)=[{"l\1\0\1p\0\0\0\2\0\0\0\230\0\0\0\1\1o\0\27\0\0\0/org/fre"..., 168}, {"\350\3\0\0h\17\0\0\4\0\0\0sshd\0\0\0\0\3\0\0\0tty\0\4\0\0\0"..., 112}], msg_controllen=0, msg_flags=0}, MSG_DONTWAIT|MSG_NOSIGNAL) = 280
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\4\1\1\n\0\0\0\2\0\0\0\215\0\0\0\1\1o\0\25\0\0\0", 24}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 24
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"/org/freedesktop/DBus\0\0\0\2\1s\0\24\0\0\0"..., 146}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 146
+recvmsg(5, 0xbfab5e14, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = -1 EAGAIN (Resource temporarily unavailable)
+ppoll([{fd=5, events=POLLIN}], 1, {24, 997251000}, NULL, 8) = 1 ([{fd=5, revents=POLLIN}], left {24, 995358966})
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\2\1\1\\\0\0\0\231\0\0\0=\0\0\0\5\1u\0\2\0\0\0", 24}], msg_controllen=16, [{cmsg_len=16, cmsg_level=SOL_SOCKET, cmsg_type=SCM_RIGHTS, [6]}], msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 24
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"\6\1s\0\5\0\0\0:1.94\0\0\0\10\1g\0\10soshusub\0\0\0"..., 148}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 148
+access("/proc/vz", F_OK)                = -1 ENOENT (No such file or directory)
+open("/run/systemd/container", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/proc/1/environ", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fstat64(7, {st_mode=S_IFREG|0400, st_size=0, ...}) = 0
+read(7, "find_preseed=/preseed.cfg\0HOME=/"..., 1024) = 210
+read(7, "", 1024)                       = 0
+close(7)                                = 0
+open("/proc/cmdline", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fstat64(7, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(7, "BOOT_IMAGE=/boot/vmlinuz-4.15.0-"..., 1024) = 170
+close(7)                                = 0
+access("/etc/initrd-release", F_OK)     = -1 ENOENT (No such file or directory)
+open("/proc/cmdline", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fstat64(7, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(7, "BOOT_IMAGE=/boot/vmlinuz-4.15.0-"..., 1024) = 170
+close(7)                                = 0
+open("/sys/fs/kdbus/control", O_RDWR|O_NOCTTY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+access("/run/user/1000/bus", F_OK)      = -1 ENOENT (No such file or directory)
+fcntl64(6, F_DUPFD_CLOEXEC, 3)          = 7
+close(5)                                = 0
+close(6)                                = 0
+stat64("/etc/update-motd.d", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+umask(022)                              = 02
+rt_sigaction(SIGINT, {SIG_IGN, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_IGN, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+clone(child_stack=0, flags=CLONE_PARENT_SETTID|SIGCHLD, parent_tidptr=0xbfab6de0) = 3969
+waitpid(3969, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0) = 3969
+rt_sigaction(SIGINT, {SIG_DFL, [], 0}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_DFL, [], 0}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3969, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+rename("/run/motd.dynamic.new", "/run/motd.dynamic") = 0
+umask(02)                               = 022
+open("/run/motd.dynamic", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+read(5, "Welcome to Ubuntu 16.04.5 LTS (G"..., 269) = 269
+close(5)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+_llseek(5, 0, [0], SEEK_CUR)            = 0
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 5, 0) = 0xb76d6000
+_llseek(5, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(5)                                = 0
+geteuid32()                             = 0
+getgroups32(0, NULL)                    = 0
+getgroups32(64, [])                     = 0
+setgroups32(0, [])                      = 0
+setfsgid32(1000)                        = 0
+setfsgid32(1000)                        = 1000
+setfsuid32(1000)                        = 0
+setfsuid32(1000)                        = 1000
+stat64("/home/giacomo/.cache/motd.legal-displayed", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+setfsuid32(0)                           = 1000
+setfsuid32(0)                           = 0
+setfsgid32(0)                           = 1000
+setfsgid32(0)                           = 0
+setgroups32(0, [])                      = 0
+open("/etc/motd", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+_llseek(5, 0, [0], SEEK_CUR)            = 0
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 5, 0) = 0xb76d6000
+_llseek(5, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(5)                                = 0
+geteuid32()                             = 0
+getgroups32(0, NULL)                    = 0
+getgroups32(64, [])                     = 0
+setgroups32(0, [])                      = 0
+setfsgid32(1000)                        = 0
+setfsgid32(1000)                        = 1000
+setfsuid32(1000)                        = 0
+setfsuid32(1000)                        = 1000
+stat64("/home/giacomo/.cache/motd.legal-displayed", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+setfsuid32(0)                           = 1000
+setfsuid32(0)                           = 0
+setfsgid32(0)                           = 1000
+setfsgid32(0)                           = 0
+setgroups32(0, [])                      = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+_llseek(5, 0, [0], SEEK_CUR)            = 0
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 5, 0) = 0xb76d6000
+_llseek(5, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(5)                                = 0
+geteuid32()                             = 0
+getgroups32(0, NULL)                    = 0
+getgroups32(64, [])                     = 0
+setgroups32(0, [])                      = 0
+setfsgid32(1000)                        = 0
+setfsgid32(1000)                        = 1000
+setfsuid32(1000)                        = 0
+setfsuid32(1000)                        = 1000
+stat64("/var/mail/giacomo", 0xbfab6e6c) = -1 ENOENT (No such file or directory)
+setfsuid32(0)                           = 1000
+setfsuid32(0)                           = 0
+setfsgid32(0)                           = 1000
+setfsgid32(0)                           = 0
+setgroups32(0, [])                      = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+_llseek(5, 0, [0], SEEK_CUR)            = 0
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 5, 0) = 0xb76d6000
+_llseek(5, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(5)                                = 0
+prlimit64(0, RLIMIT_CPU, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_FSIZE, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_DATA, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_CORE, NULL, {rlim_cur=0, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_RSS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_NPROC, NULL, {rlim_cur=64361, rlim_max=64361}) = 0
+prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=1024, rlim_max=4*1024}) = 0
+prlimit64(0, RLIMIT_MEMLOCK, NULL, {rlim_cur=64*1024, rlim_max=64*1024}) = 0
+prlimit64(0, RLIMIT_AS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_LOCKS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_SIGPENDING, NULL, {rlim_cur=64361, rlim_max=64361}) = 0
+prlimit64(0, RLIMIT_MSGQUEUE, NULL, {rlim_cur=800*1024, rlim_max=800*1024}) = 0
+prlimit64(0, RLIMIT_NICE, NULL, {rlim_cur=0, rlim_max=0}) = 0
+prlimit64(0, RLIMIT_RTPRIO, NULL, {rlim_cur=0, rlim_max=0}) = 0
+prlimit64(0, RLIMIT_RTTIME, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+open("/proc/1/limits", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(5, "Limit                     Soft L"..., 1024) = 1024
+read(5, "  \nMax msgqueue size         819"..., 1024) = 299
+read(5, "", 1024)                       = 0
+close(5)                                = 0
+getpriority(PRIO_PROCESS, 0)            = 20
+open("/etc/security/limits.conf", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2150, ...}) = 0
+read(5, "# /etc/security/limits.conf\n#\n#E"..., 4096) = 2150
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+open("/etc/security/limits.d", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 5
+fstat64(5, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(5, /* 2 entries */, 32768)   = 48
+getdents64(5, /* 0 entries */, 32768)   = 0
+close(5)                                = 0
+prlimit64(0, RLIMIT_CPU, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_FSIZE, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_DATA, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_CORE, {rlim_cur=0, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_RSS, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_NPROC, {rlim_cur=64361, rlim_max=64361}, NULL) = 0
+prlimit64(0, RLIMIT_NOFILE, {rlim_cur=1024, rlim_max=1024*1024}, NULL) = 0
+prlimit64(0, RLIMIT_MEMLOCK, {rlim_cur=64*1024, rlim_max=64*1024}, NULL) = 0
+prlimit64(0, RLIMIT_AS, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_LOCKS, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_SIGPENDING, {rlim_cur=64361, rlim_max=64361}, NULL) = 0
+prlimit64(0, RLIMIT_MSGQUEUE, {rlim_cur=800*1024, rlim_max=800*1024}, NULL) = 0
+prlimit64(0, RLIMIT_NICE, {rlim_cur=0, rlim_max=0}, NULL) = 0
+prlimit64(0, RLIMIT_RTPRIO, {rlim_cur=0, rlim_max=0}, NULL) = 0
+prlimit64(0, RLIMIT_RTTIME, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+setpriority(PRIO_PROCESS, 0, 0)         = 0
+open("/etc/security/pam_env.conf", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2972, ...}) = 0
+read(5, "#\n# This is the configuration fi"..., 4096) = 2972
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+open("/etc/environment", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=96, ...}) = 0
+read(5, "PATH=\"/usr/local/sbin:/usr/local"..., 4096) = 96
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+open("/etc/security/pam_env.conf", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2972, ...}) = 0
+read(5, "#\n# This is the configuration fi"..., 4096) = 2972
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+open("/etc/default/locale", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=285, ...}) = 0
+read(5, "#  File generated by update-loca"..., 4096) = 285
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+_llseek(5, 0, [0], SEEK_CUR)            = 0
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 5, 0) = 0xb76d6000
+_llseek(5, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(5)                                = 0
+stat64("/home/giacomo/.pam_environment", {st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+geteuid32()                             = 0
+getgroups32(0, NULL)                    = 0
+getgroups32(64, [])                     = 0
+setgroups32(0, [])                      = 0
+setfsgid32(1000)                        = 0
+setfsgid32(1000)                        = 1000
+setfsuid32(1000)                        = 0
+setfsuid32(1000)                        = 1000
+open("/home/giacomo/.pam_environment", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+read(5, "LC_NUMERIC=it_IT.UTF-8\nLC_TIME=i"..., 4096) = 258
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+setfsuid32(0)                           = 1000
+setfsuid32(0)                           = 0
+setfsgid32(0)                           = 1000
+setfsgid32(0)                           = 0
+setgroups32(0, [])                      = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_AUDIT) = 5
+fcntl64(5, F_SETFD, FD_CLOEXEC)         = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_ROUTE) = 6
+bind(6, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(6, {sa_family=AF_NETLINK, pid=3944, groups=00000000}, [12]) = 0
+time(NULL)                              = 1545573269
+sendto(6, "\24\0\0\0\26\0\1\3\225\223\37\\\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(6, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"L\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(6, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"H\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(6, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\225\223\37\\h\17\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(6)                                = 0
+sendto(5, "\204\0\0\0Q\4\5\0\4\0\0\0\0\0\0\0op=PAM:session_o"..., 132, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 132
+poll([{fd=5, events=POLLIN}], 1, 500)   = 1 ([{fd=5, revents=POLLIN}])
+recvfrom(5, "$\0\0\0\2\0\0\1\4\0\0\0h\17\0\0\0\0\0\0\204\0\0\0Q\4\5\0\4\0\0\0"..., 8988, MSG_PEEK|MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+recvfrom(5, "$\0\0\0\2\0\0\1\4\0\0\0h\17\0\0\0\0\0\0\204\0\0\0Q\4\5\0\4\0\0\0"..., 8988, MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+close(5)                                = 0
+socketpair(PF_LOCAL, SOCK_STREAM, 0, [5, 6]) = 0
+fcntl64(5, F_SETFD, FD_CLOEXEC)         = 0
+fcntl64(6, F_SETFD, FD_CLOEXEC)         = 0
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb7778ae8) = 4020
+close(5)                                = 0
+rt_sigaction(SIGHUP, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGHUP, {0x479a10, [], 0}, NULL, 8) = 0
+rt_sigaction(SIGTERM, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGTERM, {0x479a10, [], 0}, NULL, 8) = 0
+rt_sigaction(SIGINT, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGINT, {0x479a10, [], 0}, NULL, 8) = 0
+rt_sigaction(SIGXFSZ, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGXFSZ, {SIG_IGN, [], 0}, NULL, 8) = 0
+poll([{fd=6, events=POLLIN}], 1, -1)    = 1 ([{fd=6, revents=POLLIN}])
+read(6, "\0\0\0\16", 4)                 = 4
+read(6, "q\0\0\0\t/bin/bash", 14)       = 14
+poll([{fd=6, events=POLLIN}], 1, -1)    = 1 ([{fd=6, revents=POLLIN|POLLHUP}])
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=4020, si_uid=1000, si_status=255, si_utime=0, si_stime=0} ---
+read(6, "", 4)                          = 0
+geteuid32()                             = 0
+getegid32()                             = 0
+setregid32(-1, 1000)                    = 0
+setresuid32(-1, 1000, 0)                = 0
+keyctl(KEYCTL_REVOKE, 523492500)        = 0
+setreuid32(-1, 0)                       = 0
+setregid32(-1, 0)                       = 0
+getuid32()                              = 0
+open("/etc/login.defs", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=10551, ...}) = 0
+read(5, "#\n# /etc/login.defs - Configurat"..., 4096) = 4096
+read(5, " issuing \n# the \"mesg y\" command"..., 4096) = 4096
+read(5, " algorithm compatible with the o"..., 4096) = 2359
+close(5)                                = 0
+time([1545573269])                      = 1545573269
+send(4, "<86>Dec 23 14:54:29 sshd[3944]: "..., 87, MSG_NOSIGNAL) = 87
+open("/sys/fs/kdbus/0-system/bus", O_RDWR|O_NOCTTY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+getsockopt(5, SOL_SOCKET, SO_RCVBUF, [163840], [4]) = 0
+setsockopt(5, SOL_SOCKET, SO_RCVBUFFORCE, [8388608], 4) = 0
+getsockopt(5, SOL_SOCKET, SO_SNDBUF, [163840], [4]) = 0
+setsockopt(5, SOL_SOCKET, SO_SNDBUFFORCE, [8388608], 4) = 0
+connect(5, {sa_family=AF_LOCAL, sun_path="/var/run/dbus/system_bus_socket"}, 33) = 0
+getsockopt(5, SOL_SOCKET, SO_PEERCRED, {pid=1, uid=0, gid=0}, [12]) = 0
+fstat64(5, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+getsockopt(5, SOL_SOCKET, SO_ACCEPTCONN, [0], [4]) = 0
+getsockname(5, {sa_family=AF_LOCAL, NULL}, [2]) = 0
+geteuid32()                             = 0
+sendmsg(5, {msg_name(0)=NULL, msg_iov(3)=[{"\0AUTH EXTERNAL ", 15}, {"30", 2}, {"\r\nNEGOTIATE_UNIX_FD\r\nBEGIN\r\n", 28}], msg_controllen=0, msg_flags=0}, MSG_DONTWAIT|MSG_NOSIGNAL) = 45
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"OK bb858cbc17494ecc8ac897d85c1f8"..., 256}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 52
+sendmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\1\0\1\0\0\0\0\1\0\0\0m\0\0\0\1\1o\0\25\0\0\0/org/fre"..., 128}], msg_controllen=0, msg_flags=0}, MSG_DONTWAIT|MSG_NOSIGNAL) = 128
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\2\1\1\n\0\0\0\1\0\0\0=\0\0\0\6\1s\0\5\0\0\0", 24}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 24
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{":1.95\0\0\0\5\1u\0\1\0\0\0\10\1g\0\1s\0\0\7\1s\0\24\0\0\0"..., 66}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 66
+sendmsg(5, {msg_name(0)=NULL, msg_iov(2)=[{"l\1\0\1\6\0\0\0\2\0\0\0\207\0\0\0\1\1o\0\27\0\0\0/org/fre"..., 152}, {"\1\0\0\0001\0", 6}], msg_controllen=0, msg_flags=0}, MSG_DONTWAIT|MSG_NOSIGNAL) = 158
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\4\1\1\n\0\0\0\2\0\0\0\215\0\0\0\1\1o\0\25\0\0\0", 24}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 24
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"/org/freedesktop/DBus\0\0\0\2\1s\0\24\0\0\0"..., 146}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 146
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"l\2\1\1\0\0\0\0\235\0\0\0%\0\0\0\5\1u\0\2\0\0\0", 24}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 24
+recvmsg(5, {msg_name(0)=NULL, msg_iov(1)=[{"\6\1s\0\5\0\0\0:1.95\0\0\0\7\1s\0\4\0\0\0:1.2\0\0\0\0", 32}], msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_DONTWAIT|MSG_NOSIGNAL|MSG_CMSG_CLOEXEC) = 32
+close(5)                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+_llseek(5, 0, [0], SEEK_CUR)            = 0
+fstat64(5, {st_mode=S_IFREG|0644, st_size=2444, ...}) = 0
+mmap2(NULL, 2444, PROT_READ, MAP_SHARED, 5, 0) = 0xb76d6000
+_llseek(5, 2444, [2444], SEEK_SET)      = 0
+munmap(0xb76d6000, 2444)                = 0
+close(5)                                = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_AUDIT) = 5
+fcntl64(5, F_SETFD, FD_CLOEXEC)         = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_ROUTE) = 8
+bind(8, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(8, {sa_family=AF_NETLINK, pid=3944, groups=00000000}, [12]) = 0
+time(NULL)                              = 1545573269
+sendto(8, "\24\0\0\0\26\0\1\3\225\223\37\\\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"L\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"H\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\225\223\37\\h\17\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(8)                                = 0
+sendto(5, "\204\0\0\0R\4\5\0\5\0\0\0\0\0\0\0op=PAM:session_c"..., 132, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 132
+poll([{fd=5, events=POLLIN}], 1, 500)   = 1 ([{fd=5, revents=POLLIN}])
+recvfrom(5, "$\0\0\0\2\0\0\1\5\0\0\0h\17\0\0\0\0\0\0\204\0\0\0R\4\5\0\5\0\0\0"..., 8988, MSG_PEEK|MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+recvfrom(5, "$\0\0\0\2\0\0\1\5\0\0\0h\17\0\0\0\0\0\0\204\0\0\0R\4\5\0\5\0\0\0"..., 8988, MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+close(5)                                = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_AUDIT) = 5
+fcntl64(5, F_SETFD, FD_CLOEXEC)         = 0
+socket(PF_NETLINK, SOCK_RAW, NETLINK_ROUTE) = 8
+bind(8, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(8, {sa_family=AF_NETLINK, pid=3944, groups=00000000}, [12]) = 0
+time(NULL)                              = 1545573269
+sendto(8, "\24\0\0\0\26\0\1\3\225\223\37\\\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"L\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"H\0\0\0\24\0\2\0\225\223\37\\h\17\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\225\223\37\\h\17\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(8)                                = 0
+sendto(5, "\200\0\0\0P\4\5\0\6\0\0\0\0\0\0\0op=PAM:setcred a"..., 128, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 128
+poll([{fd=5, events=POLLIN}], 1, 500)   = 1 ([{fd=5, revents=POLLIN}])
+recvfrom(5, "$\0\0\0\2\0\0\1\6\0\0\0h\17\0\0\0\0\0\0\200\0\0\0P\4\5\0\6\0\0\0"..., 8988, MSG_PEEK|MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+recvfrom(5, "$\0\0\0\2\0\0\1\6\0\0\0h\17\0\0\0\0\0\0\200\0\0\0P\4\5\0\6\0\0\0"..., 8988, MSG_DONTWAIT, {sa_family=AF_NETLINK, pid=0, groups=00000000}, [12]) = 36
+close(5)                                = 0
+munmap(0xb7fb5000, 115232)              = 0
+munmap(0xb774b000, 8212)                = 0
+munmap(0xb7748000, 8224)                = 0
+munmap(0xb7745000, 8256)                = 0
+munmap(0xb773e000, 24780)               = 0
+munmap(0xb773a000, 12384)               = 0
+munmap(0xb7736000, 12384)               = 0
+munmap(0xb7732000, 12404)               = 0
+munmap(0xb76eb000, 289585)              = 0
+munmap(0xb76c9000, 16536)               = 0
+munmap(0xb76e7000, 12392)               = 0
+munmap(0xb76e3000, 12376)               = 0
+munmap(0xb76dc000, 24768)               = 0
+munmap(0xb76d7000, 16492)               = 0
+munmap(0xb76bc000, 49500)               = 0
+exit_group(255)                         = ?
++++ exited with 255 +++

@@ -1,0 +1,3 @@
+Name            Stmts   Miss Branch BrMiss  Cover   Missing
+-----------------------------------------------------------
+CalcoloPasqua      19      1      6      2    88%   30
